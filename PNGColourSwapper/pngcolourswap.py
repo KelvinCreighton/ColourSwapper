@@ -57,14 +57,14 @@ def askuser():
     colour2 = input('Type the rgb values seperated by , for colour2: ')
     if colour1 == '':
         colour1 = (255, 255, 255)
+        print('Defaulted to: ', colour1)
     else:
         colour1 = tuple(int(value) for value in colour1.split(','))
     if colour2 == '':
         colour2 = (0, 0, 0)
+        print('Defaulted to: ', colour2)
     else:
         colour2 = tuple(int(value) for value in colour2.split(','))
-    print(colour1)
-    print(colour2)
     total_buffer = 255
     tolerance = 0
     blur_swap_tolerance = 0
@@ -73,11 +73,13 @@ def askuser():
         tolerance = input('Type the tolerance buffer: ')
         if tolerance == '':
             tolerance = 255//4
+            print('Defaulted to: ', tolerance)
         else:
             tolerance = int(tolerance)
         blur_swap_tolerance = input('Type the blur buffer: ')
         if blur_swap_tolerance == '':
             blur_swap_tolerance = 255//4
+            print('Defaulted to: ', blur_swap_tolerance)
         else:
             blur_swap_tolerance = int(tolerance)
         total_buffer = tolerance + blur_swap_tolerance
