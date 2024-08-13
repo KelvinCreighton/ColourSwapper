@@ -48,18 +48,25 @@ def colour_swap(img_path, colour1, colour2, tolerance, blur_swap_tolerance):
     img.putdata(new_data)
     img.save('output.png')
 
+    print()
+    print(' '*28, 'Finished')
+    print('='*64)
+
 
 def askuser():
     input_img = input('Type a pdf directory: ')
     if input_img == '':
         input_img = 'input.png'
+        print('Defaulted to: ', input_img)
+
     colour1 = input('Type the rgb values seperated by , for colour1: ')
-    colour2 = input('Type the rgb values seperated by , for colour2: ')
     if colour1 == '':
         colour1 = (255, 255, 255)
         print('Defaulted to: ', colour1)
     else:
         colour1 = tuple(int(value) for value in colour1.split(','))
+
+    colour2 = input('Type the rgb values seperated by , for colour2: ')
     if colour2 == '':
         colour2 = (0, 0, 0)
         print('Defaulted to: ', colour2)
