@@ -1,3 +1,3 @@
-# PDFColourSwapper
+# ColourSwapper
 
-This did not work and I'm switching to making a PNG colour swapper
+Currently the PDFColourSwapper does not work
